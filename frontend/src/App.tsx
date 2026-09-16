@@ -62,25 +62,25 @@ function App() {
             label="Pending"
             count={statusCounts.pending}
             active={filter === 'pending'}
-            onClick={() => setFilter('pending')}
+            onClick={() => setFilter('pending' as FilterStatus)}
           />
           <StatusCard
             label="Running"
             count={statusCounts.running}
             active={filter === 'running'}
-            onClick={() => setFilter('running')}
+            onClick={() => setFilter('running' as FilterStatus)}
           />
           <StatusCard
             label="Completed"
             count={statusCounts.completed}
             active={filter === 'completed'}
-            onClick={() => setFilter('completed')}
+            onClick={() => setFilter('completed' as FilterStatus)}
           />
           <StatusCard
             label="Failed"
             count={statusCounts.failed}
             active={filter === 'failed'}
-            onClick={() => setFilter('failed')}
+            onClick={() => setFilter('failed' as FilterStatus)}
           />
         </div>
 
