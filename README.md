@@ -2,6 +2,22 @@
 
 A production-quality job queue management system built with React and NestJS, featuring concurrency-safe status transitions, comprehensive validation, and a clean, modern interface.
 
+## 🚀 Live Demo
+
+**Frontend Dashboard:**  
+🔗 [Deploy to Vercel](https://vercel.com/new/clone?repository-url=https://github.com/YOUR_USERNAME/job-queue-dashboard&root-directory=frontend&env=VITE_API_URL&envDescription=Backend%20API%20URL&project-name=job-queue-dashboard)
+
+**Backend API:**  
+🔗 Deploy to Render (see [RENDER_VERCEL_DEPLOYMENT.md](RENDER_VERCEL_DEPLOYMENT.md))
+
+**GitHub Repository:**  
+🔗 `https://github.com/YOUR_USERNAME/job-queue-dashboard`
+
+> **Note:** Replace `YOUR_USERNAME` with your GitHub username after pushing to GitHub.  
+> See [RENDER_VERCEL_DEPLOYMENT.md](RENDER_VERCEL_DEPLOYMENT.md) for complete deployment instructions.
+
+---
+
 ## Overview
 
 This full-stack application allows users to create, manage, and monitor jobs through their lifecycle. The system enforces strict state transitions at the database level and handles concurrent modifications safely.

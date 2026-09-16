@@ -1,0 +1,32 @@
+# Render Blueprint for Job Queue Dashboard Backend
+# This file can be used for one-click deployment
+
+services:
+  # PostgreSQL Database
+  - type: pserv
+    name: job-queue-db
+    env: docker
+    plan: free
+    databases:
+      - name: job_queue_db
+        user: job_queue_user
+
+  # Backend Web Service
+  - type: web
+    name: job-queue-backend
+    env: node
+    plan: free
+    buildCommand: npm install && npm run prisma:generate && npm run build
+    startCommand: npm run prisma:migrate:deploy && npm run start:prod
+    healthCheckPath: /health
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: job-queue-db
+          property: connectionString
+      - key: PORT
+        value: 3000
+      - key: NODE_ENV
+        value: production
+      - key: CORS_ORIGIN
+        sync: false # You'll set this manually after frontend deployment
