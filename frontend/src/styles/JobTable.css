@@ -1,0 +1,144 @@
+.job-table-container {
+  overflow-x: auto;
+}
+
+.job-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.job-table th {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: #555;
+  border-bottom: 2px solid #dee2e6;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.job-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.job-table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.job-table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+.job-table tbody tr.deleting {
+  opacity: 0.5;
+}
+
+.job-title {
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.job-date {
+  color: #666;
+  font-size: 0.875rem;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 0.375rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-pending {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.status-running {
+  background-color: #cfe2ff;
+  color: #084298;
+}
+
+.status-completed {
+  background-color: #d1e7dd;
+  color: #0f5132;
+}
+
+.status-failed {
+  background-color: #f8d7da;
+  color: #842029;
+}
+
+.job-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.action-button {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: white;
+  color: #333;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  white-space: nowrap;
+}
+
+.action-button:hover:not(:disabled) {
+  background-color: #3498db;
+  color: white;
+  border-color: #3498db;
+}
+
+.action-button:disabled {
+  background-color: #f5f5f5;
+  color: #999;
+  cursor: not-allowed;
+  border-color: #ddd;
+}
+
+.delete-button {
+  border-color: #e74c3c;
+  color: #e74c3c;
+}
+
+.delete-button:hover:not(:disabled) {
+  background-color: #e74c3c;
+  color: white;
+  border-color: #e74c3c;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 3rem;
+  color: #999;
+  font-size: 1.125rem;
+}
+
+@media (max-width: 768px) {
+  .job-table {
+    font-size: 0.875rem;
+  }
+
+  .job-table th,
+  .job-table td {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .action-button {
+    padding: 0.375rem 0.75rem;
+    font-size: 0.8125rem;
+  }
+}
